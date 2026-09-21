@@ -1,0 +1,11 @@
+<tr>
+  <td class="p-1 pr-2" style="white-space: nowrap; vertical-align: top">
+    <a class="font-weight-bold" href="{% if project.redirect %}{{ project.redirect }}{% else %}{{ project.url | relative_url }}{% endif %}">{{ project.title }}</a>
+    {% if project.github %}
+      <a href="{{ project.github }}" data-toggle="tooltip" title="Code Repository">
+        <i class="fa-brands fa-github gh-icon"></i>
+      </a>
+    {% endif %}
+  </td>
+  <td class="p-1 pl-2 font-weight-light">{{ project.description }}</td>
+</tr>
